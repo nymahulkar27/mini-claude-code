@@ -1,0 +1,5 @@
+# Ignore all .ini files
+*.ini
+
+# OR if you only want to ignore Windows system artifacts specifically:
+desktop.ini
