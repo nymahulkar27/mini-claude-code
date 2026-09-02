@@ -23,14 +23,17 @@ while True:
     # Append the user's message to the conversation history
     messages.append({"role": "user", "content": user_input})
 
+    # Generate a response from the model
     response = client.chat.completions.create(
         model="gpt-5.4-mini",
         messages=messages,
     )
 
+    # Extract the assistant's reply from the response
     reply = response.choices[0].message.content
 
     # Append the assistant's reply to the conversation history
     messages.append({"role": "assistant", "content": reply})
 
+    # Print the assistant's reply
     print("Bot:", reply)
